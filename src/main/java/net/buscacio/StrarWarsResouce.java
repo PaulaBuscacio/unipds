@@ -15,7 +15,9 @@ public class StrarWarsResouce {
   @GET
   @Path("starships")
   @Produces(MediaType.APPLICATION_JSON)
-  public String getStarShips(){
+  public String getStarShips() {
     return starWarsService.getStarships();
+
+
   }
 }
