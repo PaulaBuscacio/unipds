@@ -70,3 +70,8 @@ Easily start your REST Web Services
 Exemplo de comando para adicionar extensão
 ```shell script
  mvn quarkus:add-extension -Dextensions="quarkus-rest-client"
+```
+
+Para exercício com token
+token=$(curl https://raw.githubusercontent.com/eldermoraes/unipds/main/jwt-token/quarkus.jwt.token -s)
+ curl -v -w '\n' -H "Authorization: Bearer $token" localhost:8080/api/secure/claim
