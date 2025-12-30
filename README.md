@@ -75,3 +75,6 @@ Exemplo de comando para adicionar extensão
 Para exercício com token
 token=$(curl https://raw.githubusercontent.com/eldermoraes/unipds/main/jwt-token/quarkus.jwt.token -s)
  curl -v -w '\n' -H "Authorization: Bearer $token" localhost:8080/api/secure/claim
+
+Para rodar o jaeger localmente
+docker run --name=jaeger -d -p 16686:16686 -p 4317:4317 -e COLLECTOR_OLTP_ENABLED=true jaegertracing/all-in-one:latest
